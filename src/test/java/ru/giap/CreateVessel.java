@@ -12,8 +12,8 @@ public class CreateVessel {
 
     @BeforeTest
     public void LoginSite(){
-        Login login = new Login();
-        login.LoginPage();
+        FinalLogin finalLogin = new FinalLogin();
+        finalLogin.LoginPage();
     }
 
     @Test(priority = 2)

@@ -1,5 +1,6 @@
 package ru.giap;
 
+import com.sun.org.glassfish.gmbal.Description;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,8 +14,8 @@ public class UnitModuleTest {
 
     @BeforeTest
     public void LoginSite() {
-        Login login = new Login();
-        login.LoginPage();
+        FinalLogin finalLogin = new FinalLogin();
+        finalLogin.LoginPage();
     }
 
     @AfterTest
@@ -41,6 +42,7 @@ public class UnitModuleTest {
     }
 
     @Test(priority = 3)
+    @Description("uhgioesrhiftew")
     public void createUnitInFolder() {
         $(By.xpath("//*[contains(text(),'Тестовая папка')]")).contextClick();
         $(By.xpath("//a[@rel=0]")).shouldBe(visible).click();
